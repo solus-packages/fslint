@@ -1,0 +1,31 @@
+name       : fslint
+version    : 2.46
+release    : 1
+source     :
+    - https://github.com/pixelb/fslint/archive/2.46.tar.gz : 5b7403bde841cbca2cb4906ff56482a0476c5860b3486d88c675f4d6a26be0b1
+license    : GPL-2.0
+component  : system.utils
+summary    : FSlint is a utility to find and clean various forms of lint on a filesystem.
+description: |
+    FSlint is a utility to find and clean various forms of lint on a filesystem.
+rundeps    :
+    - python-gtk2
+setup      : |
+    sed -i -e s_^liblocation=.*_liblocation=\'/usr/share/fslint\'_ fslint-gui
+install    : |
+    install -d $installdir/usr/share/{man/man1,pixmaps}
+    install -d $installdir/usr/share/fslint/fslint/{fstool,supprt/rmlint}
+
+    install -D -m00755 -t $installdir/usr/share/fslint/fslint fslint/find* fslint/zipdir fslint/fslint
+    install -D -m00755 -t $installdir/usr/share/fslint/fslint/fstool fslint/fstool/*
+    install -D -m00755 -t $installdir/usr/share/fslint/fslint/supprt fslint/supprt/get* fslint/supprt/fslver fslint/supprt/md5sum_approx
+    install -D -m00755 -t $installdir/usr/share/fslint/fslint/supprt/rmlint fslint/supprt/rmlint/*
+    install -D -m00755 fslint-gui $installdir/usr/bin/fslint-gui
+    install -D -m00644 fslint.glade $installdir/usr/share/fslint/fslint.glade
+    install -D -m00644 fslint_icon.png $installdir/usr/share/fslint/fslint_icon.png
+    install -D -m00644 fslint.desktop $installdir/usr/share/applications/fslint.desktop
+    install -D -m00644 fslint_icon.png $installdir/usr/share/pixmaps/fslint_icon.png
+
+    cp -r man/* $installdir/usr/share/man/man1
+
+    %make_install -C po
