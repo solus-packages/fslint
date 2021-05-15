@@ -1,39 +1,92 @@
 <PISI>
     <Source>
         <Name>fslint</Name>
+        <Homepage>https://github.com/pixelb/fslint</Homepage>
         <Packager>
-            <Name>Bryan T. Meyers</Name>
-            <Email>bmeyers@datadrake.com</Email>
+            <Name>Algent Albrahimi</Name>
+            <Email>algent@protonmail.com</Email>
         </Packager>
-        <License>GPL-2.0</License>
+        <License>GPL-2.0-or-later</License>
         <PartOf>system.utils</PartOf>
-        <Summary xml:lang="en">FSlint is a utility to find and clean various forms of lint on a filesystem.</Summary>
+        <Summary xml:lang="en">FSlint is a utility to find and clean various forms of lint on a filesystem</Summary>
         <Description xml:lang="en">FSlint is a utility to find and clean various forms of lint on a filesystem.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
     </Source>
     <Package>
         <Name>fslint</Name>
-        <Summary xml:lang="en">FSlint is a utility to find and clean various forms of lint on a filesystem.</Summary>
+        <Summary xml:lang="en">FSlint is a utility to find and clean various forms of lint on a filesystem</Summary>
         <Description xml:lang="en">FSlint is a utility to find and clean various forms of lint on a filesystem.
 </Description>
         <PartOf>system.utils</PartOf>
         <Files>
-            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/bin/fslint-gui</Path>
             <Path fileType="data">/usr/share/applications/fslint.desktop</Path>
-            <Path fileType="data">/usr/share/fslint</Path>
-            <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/fslint/fslint.glade</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/findbl</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/finded</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/findid</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/findnl</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/findns</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/findrs</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/findsn</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/findtf</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/findu8</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/findul</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/findup</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/fslint</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/fstool/dir_size</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/fstool/dupwaste</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/fstool/edu</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/fstool/lS</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/supprt/fslver</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/supprt/getffl</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/supprt/getffp</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/supprt/getfpf</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/supprt/md5sum_approx</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/supprt/rmlint/fix_ws.sh</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/supprt/rmlint/fixdup</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/supprt/rmlint/fixdup.sh</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/supprt/rmlint/merge_hardlinks</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/supprt/rmlint/view_ws.sh</Path>
+            <Path fileType="data">/usr/share/fslint/fslint/zipdir</Path>
+            <Path fileType="data">/usr/share/fslint/fslint_icon.png</Path>
+            <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/el/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ms/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ro/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/fslint.mo</Path>
+            <Path fileType="man">/usr/share/man/man1/fslint-gui.1</Path>
+            <Path fileType="man">/usr/share/man/man1/fslint.1</Path>
             <Path fileType="data">/usr/share/pixmaps/fslint_icon.png</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2017-02-05</Date>
+        <Update release="2">
+            <Date>2021-05-14</Date>
             <Version>2.46</Version>
             <Comment>Packaging update</Comment>
-            <Name>Bryan T. Meyers</Name>
-            <Email>bmeyers@datadrake.com</Email>
+            <Name>Algent Albrahimi</Name>
+            <Email>algent@protonmail.com</Email>
         </Update>
     </History>
 </PISI>
